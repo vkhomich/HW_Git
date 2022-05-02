@@ -1,0 +1,481 @@
+===========================================JSON=======================================================
+
+//////////Создать внешний репозиторий c названием JSON.//////////
+//////////Клонировать репозиторий JSON на локальный компьютер.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d
+$ git clone https://github.com/vkhomich/JSON
+Cloning into 'JSON'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+//////////Внутри локального JSON создать файл “new.json”.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/JSON (main)
+$ cd /d/JSON
+$ touch new.json
+
+//////////Добавить файл под гит.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/JSON (main)
+$ git add new.json
+
+//////////Закоммитить файл.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/JSON (main)
+$ git commit -m "add new.json file"
+[main 0beb027] add new.json file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.json
+
+//////////Отправить файл на внешний GitHub репозиторий//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/JSON (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 292 bytes | 292.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/vkhomich/JSON
+   d154b43..0beb027  main -> main
+
+//////////Отредактировать содержание файла “new.json” - написать информацию о себе
+(ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/JSON (main)
+$ vim new.json
+{
+        "ФИО": "Хомич Виктория Геннадьевна",
+        "Возраст": 34,
+        "Количество домашних животных": 0,
+        "Будущая желаемая зарплата": "750$"
+}
+
+//////////Отправить изменения на внешний репозиторий.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/JSON (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 451 bytes | 451.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/vkhomich/JSON
+   0beb027..3c9c984  main -> main
+
+//////////Создать файл preferences.json//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/JSON (main)
+$ touch preferences.json
+
+//////////В файл preferences.json добавить информацию о своих предпочтениях 
+(Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/JSON (main)
+$ vim preferences.json
+{
+        "Любимый фильм": "Побег из тюрьмы",
+        "Любимый сериал": "Постучись в мою дверь",
+        "Любимая еда": "Персики",
+        "Любимое время года": "Лето",
+        "Страна которую хотели бы посетить": "Австалия"
+}
+
+//////////Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/JSON (main)
+$ touch skills.json
+Admin@DESKTOP-M74DGFE MINGW64 /d/JSON (main)
+$ vim skills.json
+{
+        "Базовая теория": "Что такое тестирование, багрепорты, документация, виды, методы, направления тестирования, SDLC, STLC",
+        "Клиент-серверная архитектура": "HTTP Методы запросов на сервер, коды ответов HTTP сервера, структуры HTTP запросов и ответов",
+        "Что такое JSON, XML": "Их структура",
+        "Тестирование API через Postman": "JS, автотесты API, cнятие и чтение логов c внешнего сервера",
+        "Снифинг http web трафика": "через Charles и Fiddler",
+        "Dev Tools веб браузеров": "Google Chrome, FireFox",
+        "VPN": "Как работает, зачем нужен, как использовать, варианты инструментов",
+        "Мобильное тестирование": "Особенность iOS, Android, гайдлайны, cборка iOS приложений на XCode, cборка Android приложений на Android Studio",
+        "ADB": "управление андройд девайсами",
+        "Настройка прокси и vpn": "на iOS и Android",
+        "Перехват (сниффинг) мобильного трафика": "через Charles и Fiddler на iOS и Android",
+        "Командная строка (terminal) Linux": "копирование, создание, просмотр, перемещение файлов на серверах без графического интерфейса",
+        "Основы bash скриптинг": "автоматизация рутинных задач на сервере",
+        "Основы SQL": "Create, Delete, Drop, Insert Into, Select, From, Where, Join",
+        "База данных Postgres": "установка, настройка и использование",
+        "Нереляционная база данных Redis": "установка, настройка и использование",
+        "Python": "Изучение основ. Создание клиент серверного приложени",
+        "Jmeter": "Нагрузочное тестирование",
+        "Scrum": "Методология разработки"
+}
+
+//////////Отправить сразу 2 файла на внешний репозиторий.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/JSON (main)
+$ git add
+Admin@DESKTOP-M74DGFE MINGW64 /d/JSON (main)
+$ git commit -m "add preferences.json and skills.json files with info"
+warning: LF will be replaced by CRLF in preferences.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in skills.json.
+The file will have its original line endings in your working directory
+[main 4425a16] add preferences.json and skills.json files with info
+ 2 files changed, 28 insertions(+)
+ create mode 100644 preferences.json
+ create mode 100644 skills.json
+Admin@DESKTOP-M74DGFE MINGW64 /d/JSON (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.52 KiB | 1.52 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/vkhomich/JSON
+   3c9c984..4425a16  main -> main
+
+//////////На веб интерфейсе создать файл bug_report.json.//////////
+//////////Сделать Commit changes (сохранить) изменения на веб интерфейсе.//////////
+//////////На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.//////////
+//////////Сделать Commit changes (сохранить) изменения на веб интерфейсе//////////
+//////////Синхронизировать внешний и локальный репозиторий JSON//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/JSON (main)
+$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 1.12 KiB | 76.00 KiB/s, done.
+From https://github.com/vkhomich/JSON
+   88a2e27..11acc47  main       -> origin/main
+
+Admin@DESKTOP-M74DGFE MINGW64 /d/JSON (main)
+$ git merge
+Updating 4425a16..11acc47
+Fast-forward
+ bug_report.json | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+ create mode 100644 bug_report.json
+
+======================================================XML============================================================
+
+//////////Создать внешний репозиторий c названием XML.//////////
+//////////Клонировать репозиторий XML на локальный компьютер.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d
+$ git clone https://github.com/vkhomich/XML
+Cloning into 'XML'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+//////////Внутри локального XML создать файл “new.xml”.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d
+$ cd /d/XML
+Admin@DESKTOP-M74DGFE MINGW64 /d/XML (main)
+$ touch new.xml
+
+//////////Добавить файл под гит//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/XML (main)
+$ git add new.xml
+
+//////////Закоммитить файл.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/XML (main)
+$ git commit -m "add empty new.xml file"
+[main cc9cb50] add empty new.xml file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.xml
+
+//////////Отправить файл на внешний GitHub репозиторий.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/XML (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 297 bytes | 297.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/vkhomich/XML
+   f301c96..cc9cb50  main -> main
+
+//////////Отредактировать содержание файла “new.xml” - написать информацию о себе 
+(ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/XML (main)
+$ vim new.xml
+<о себе>
+        <фио> Хомич Виктория Геннадьевна </фио>
+        <возраст>34</возраст>
+        <количество домашних животных>0</количество домашних животных>
+        <будущая желаемая зарплата>750$</будущая желаемая зарплата>
+</о себе>
+
+//////////Отправить изменения на внешний репозиторий.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/XML (main)
+$ git add new.xml
+
+Admin@DESKTOP-M74DGFE MINGW64 /d/XML (main)
+$ git commit -m "add info in new.xml file"
+[main 7cdcceb] add info in new.xml file
+ 1 file changed, 6 insertions(+)
+
+Admin@DESKTOP-M74DGFE MINGW64 /d/XML (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 478 bytes | 478.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/vkhomich/XML
+   cc9cb50..7cdcceb  main -> main
+
+//////////Создать файл preferences.xml//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/XML (main)
+$ touch preferences.xml
+
+//////////В файл preferences.xml добавить информацию о своих предпочтениях 
+(Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/XML (main)
+$ vim preferences.xml
+<preferences>
+        <любимый фильм>Побег из тюрьмы</любимый фильм>
+        <любимый сериал>Постучись в мою дверь</любимый сериал>
+        <любимая еда>Персики</любимая еда>
+        <любимое время года>Лето</любимое время года> 
+        <страна которую хотели бы посетить>Австалия</страна которую хотели бы посетить>
+</preferences>
+
+//////////Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/XML (main)
+$ touch skills.xml
+Admin@DESKTOP-M74DGFE MINGW64 /d/XML (main)
+$ vim skills.xml
+
+<skills>
+        <базовая теория>Что такое тестирование, багрепорты, документация, виды, методы, направления тестирования, SDLC, STL</базовая теория>
+        <клиент-серверная архитектура>HTTP Методы запросов на сервер, коды ответов HTTP сервера, структуры HTTP запросов и ответов</клиент-серверная архитектура>
+        <JSON, XML>Определение, структура</JSON, XML>
+        <тестирование API через Postman>JS, автотесты API, cнятие и чтение логов c внешнего сервера</тестирование API через Postman> 
+        <снифинг http web трафика>через Charles и Fiddler</снифинг http web трафика>
+        <Dev Tools веб браузеров>Google Chrome, FireFox</Dev Tools веб браузеров>
+        <VPN>Как работает, зачем нужен, как использовать, варианты инструментов</VPN>
+        <мобильное тестирование>Особенность iOS, Android, гайдлайны, cборка iOS приложений на XCode, cборка Android приложений на Android Studio</мобильное тестирование>
+        <ADB>управление андройд девайсами</ADB>
+        <настройка прокси и vpn>на iOS и Android</настройка прокси и vpn>
+        <перехват (сниффинг) мобильного трафика>через Charles и Fiddler на iOS и Android</перехват (сниффинг) мобильного трафика>
+        <командная строка (terminal) Linux>копирование, создание, просмотр, перемещение файлов на серверах без графического интерфейс</командная строка (terminal) Linux>
+        <Основы bash скриптинг>автоматизация рутинных задач на сервере</Основы bash скриптинг>
+        <Основы SQL>Create, Delete, Drop, Insert Into, Select, From, Where, Join</Основы SQL>
+        <База данных Postgres>установка, настройка и использовани</База данных Postgres>
+        <Нереляционная база данных Redis>установка, настройка и использование</Нереляционная база данных Redis>
+        <Python>Изучение основ. Создание клиент серверного приложения</Python>
+        <Jmeter>Нагрузочное тестирование</Jmeter>
+        <Scrum>Методология разработки</Scrum>    
+</skills>
+
+//////////Сделать коммит в одну строку.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/XML (main)
+$ git add preferences.xml skills.xml
+warning: LF will be replaced by CRLF in preferences.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in skills.xml.
+The file will have its original line endings in your working directory
+
+Admin@DESKTOP-M74DGFE MINGW64 /d/XML (main)
+$ git commit -am "add preferences.xml and skills.xml files with info"
+[main a1fd5e2] add preferences.xml and skills.xml files with info
+ 2 files changed, 28 insertions(+)
+ create mode 100644 preferences.xml
+ create mode 100644 skills.xml
+
+//////////Отправить сразу 2 файла на внешний репозиторий.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/XML (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.64 KiB | 1.64 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/vkhomich/XML
+   7cdcceb..a1fd5e2  main -> main
+
+//////////На веб интерфейсе создать файл bug_report.xml. //////////
+//////////Сделать Commit changes (сохранить) изменения на веб интерфейсе. //////////
+//////////На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML. //////////
+//////////Сделать Commit changes (сохранить) изменения на веб интерфейсе.//////////
+//////////Синхронизировать внешний и локальный репозиторий XML//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/XML (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 1.17 KiB | 70.00 KiB/s, done.
+From https://github.com/vkhomich/XML
+   3d4264a..ce9b040  main       -> origin/main
+Updating a1fd5e2..ce9b040
+Fast-forward
+ bug_report.xml | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+ create mode 100644 bug_report.xml
+
+============================================================TXT=======================================================
+//////////Создать внешний репозиторий c названием TXT//////////
+//////////Клонировать репозиторий TXT на локальный компьютер//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d
+$ git clone https://github.com/vkhomich/TXT
+Cloning into 'TXT'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+//////////Внутри локального TXT создать файл “new.txt”.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d
+$ cd /d/TXT
+Admin@DESKTOP-M74DGFE MINGW64 /d/TXT (main)
+$ touch new.txt
+
+//////////Добавить файл под гит//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/TXT (main)
+$ git add new.txt
+
+//////////Закоммитить файл.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/TXT (main)
+$ git commit -m "add new.txt file"
+[main 9546188] add new.txt file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.txt
+
+//////////Отправить файл на внешний GitHub репозиторий.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/TXT (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 291 bytes | 291.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/vkhomich/TXT
+   5d66395..9546188  main -> main
+
+
+//////////Отредактировать содержание файла “new.txt” - написать информацию о себе 
+(ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/TXT (main)
+$ vim new.txt
+ФИО: Хомич Виктория Геннадьевна
+Возраст: 34
+Количество домашних животных: 0
+Будущая желаемая зарплата: 750$
+
+//////////Отправить изменения на внешний репозиторий.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/TXT (main)
+$ git add new.txt
+warning: LF will be replaced by CRLF in new.txt.
+The file will have its original line endings in your working directory
+
+Admin@DESKTOP-M74DGFE MINGW64 /d/TXT (main)
+$ git commit -m "add info in new.txt file"
+[main e4e1a68] add info in new.txt file
+ 1 file changed, 5 insertions(+)
+
+Admin@DESKTOP-M74DGFE MINGW64 /d/TXT (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 442 bytes | 442.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/vkhomich/TXT
+   9546188..e4e1a68  main -> main
+
+//////////Создать файл preferences.txt//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/TXT (main)
+$ touch preferences.txt
+
+//////////В файл preferences.txt” добавить информацию о своих предпочтениях 
+(Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/TXT (main)
+$ vim preferences.txt
+любимый фильм: "Побег из тюрьмы"
+любимый сериал: "Постучись в мою дверь"
+любимая еда: персики
+любимое время года: лето 
+страна которую хотели бы посетить: Австалия
+
+//////////Создать файл skills.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/TXT (main)
+$ touch skills.txt
+
+Admin@DESKTOP-M74DGFE MINGW64 /d/TXT (main)
+$ vim skills.txt
+Программа курса:
+1. Базовая теория (Что такое тестирование, багрепорты, документация, виды, методы, направления тестирования и т.п.) SDLC, STLC.
+2. Что такое клиент-серверная архитектура.
+3. HTTP Методы запросов на сервер.
+4. Коды ответов HTTP сервера.
+5. Структуры HTTP запросов и ответов.
+6. Что такое JSON, XML. Их структура.
+7. Тестирование API через Postman (JS, автотесты API).
+8. Снятие и чтение логов c внешнего сервера.
+9. Снифинг http web трафика через Charles и Fiddler.
+10. Dev Tools веб браузеров (Google Chrome, FireFox).
+11. VPN. (Как работает, зачем нужен, как использовать, варианты инструментов)
+12. Мобильное тестирование.
+13. Особенность iOS, Android, гайдлайны.
+14. Сборка iOS приложений на XCode. (У кого нет Mac компьютера, просто посмотрят)
+15. Сборка Android приложений на Android Studio.
+16. ADB (управление андройд девайсами).
+17. Настройка прокси и vpn на iOS и Android.
+18. Перехват (сниффинг) мобильного трафика через Charles и Fiddler на iOS и Android.
+19. Командная строка (terminal) Linux (копирование, создание, просмотр, перемещение файлов на серверах без графического интерфейса)
+20. Основы bash скриптинг, автоматизация рутинных задач на сервере.
+21. Доступ к удалённым серверам.
+22. Основы SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join).
+23. База данных Postgres (установка, настройка и использование).
+24. Нереляционная база данных Redis (установка, настройка и использование).
+25. Нагрузочное тестирование в Jmeter.
+26. Методология разработки Scrum.
+27. Python. (Изучение основ. Создание клиент серверного приложения)
+
+//////////Сделать коммит в одну строку.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/TXT (main)
+$ git add preferences.txt skills.txt
+warning: LF will be replaced by CRLF in preferences.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in skills.txt.
+The file will have its original line endings in your working directory
+
+Admin@DESKTOP-M74DGFE MINGW64 /d/TXT (main)
+$ git commit -am "add preferences.txt and skills.txt files with info"
+[main 9d58b88] add preferences.txt and skills.txt files with info
+ 2 files changed, 33 insertions(+)
+ create mode 100644 preferences.txt
+ create mode 100644 skills.txt
+
+//////////Отправить сразу 2 файла на внешний репозиторий.//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/TXT (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.65 KiB | 1.65 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/vkhomich/TXT
+   e4e1a68..9d58b88  main -> main
+
+//////////На веб интерфейсе создать файл bug_report.txt.//////////
+//////////Сделать Commit changes (сохранить) изменения на веб интерфейсе.//////////
+//////////На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.//////////
+//////////Сделать Commit changes (сохранить) изменения на веб интерфейсе.//////////
+//////////Синхронизировать внешний и локальный репозиторий TXT//////////
+Admin@DESKTOP-M74DGFE MINGW64 /d/TXT (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 1.10 KiB | 66.00 KiB/s, done.
+From https://github.com/vkhomich/TXT
+   a80a816..1027da9  main       -> origin/main
+error: invalid path 'bug_report.txt.'
+Updating 9d58b88..1027da9
+
