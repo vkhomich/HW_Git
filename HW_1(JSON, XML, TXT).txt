@@ -469,13 +469,15 @@ To https://github.com/vkhomich/TXT
 //////////Синхронизировать внешний и локальный репозиторий TXT//////////
 Admin@DESKTOP-M74DGFE MINGW64 /d/TXT (main)
 $ git pull
-remote: Enumerating objects: 5, done.
-remote: Counting objects: 100% (5/5), done.
-remote: Compressing objects: 100% (3/3), done.
-remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (3/3), 1.10 KiB | 66.00 KiB/s, done.
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), 618 bytes | 51.00 KiB/s, done.
 From https://github.com/vkhomich/TXT
-   a80a816..1027da9  main       -> origin/main
-error: invalid path 'bug_report.txt.'
-Updating 9d58b88..1027da9
-
+   1027da9..87edb81  main       -> origin/main
+Updating 9d58b88..87edb81
+Fast-forward
+ bug_report.txt | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+ create mode 100644 bug_report.txt
